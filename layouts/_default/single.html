@@ -46,9 +46,13 @@
     {{- end }}
   </footer>
 
-  {{- if (.Param "comments") }}
-  {{- partial "comments.html" . }}
-  {{- end }}
+  {{ template "_internal/disqus.html" . }}
+
+  <!--
+    {{- if (.Param "comments") }}
+    {{- partial "comments.html" . }}
+    {{- end }}
+   -->
 </article>
 
 {{- end }}{{/* end main */}}
