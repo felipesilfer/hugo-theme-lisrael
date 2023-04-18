@@ -1,9 +1,9 @@
 {{- if not (.Param "hideFooter") }}
 <footer class="footer">
     {{- if .Site.Copyright }}
-    <span>{{ .Site.Copyright | markdownify }}</span>
+    <span>{{ replace .Site.Copyright "{year}" now.Year | markdownify }}</span>
     {{- else }}
-    <span> built with ♥ from charlola
+    <span> built with ♥ by <a href="https://github.com/felipesilfer/">felipesilfert</a>felipesilfer
     {{- end }}
       <!--
     <div><span> <a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a> </span></div>
